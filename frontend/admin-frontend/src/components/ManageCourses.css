@@ -1,78 +1,172 @@
-/* Header Section */
+/* =========================
+   Page Layout Fix (IMPORTANT)
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f4f6fa;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Fixed Sidebar - stays on left */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #3E3232;
+  flex-shrink: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+/* Main content starts AFTER sidebar - no overlap */
+.main-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* =========================
+   Header Section
+========================= */
+
 .manage-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  flex-wrap: wrap; /* mobile ke liye wrap */
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
+/* =========================
+   Add Course Button
+========================= */
+
 .add-course-btn {
-  padding: 6px 14px;
-  background-color: #503C3C; /* primary accent */
+  padding: 8px 16px;
+  background-color: #503C3C;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  margin-top: 8px; /* wrap hone pe spacing */
+  transition: all 0.25s ease;
 }
 
 .add-course-btn:hover {
-  background-color: #7E6363; /* hover accent */
+  background-color: #7E6363;
 }
 
-/* Courses Table */
+/* =========================
+   Table Container
+========================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* =========================
+   Courses Table
+========================= */
+
 .courses-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
+/* Table Cells */
 .courses-table th,
 .courses-table td {
-  padding: 8px;
-  border: 1px solid #ddd;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
   text-align: left;
 }
 
+/* Table Header */
 .courses-table th {
-  background-color: #3E3232; /* darkest header */
+  background-color: #3E3232;
   color: white;
+  font-weight: 600;
 }
 
+/* Zebra Rows */
 .courses-table tr:nth-child(even) {
-  background-color: #f3f4f6; /* light gray row background */
+  background-color: #f8f9fb;
 }
 
-/* Status Badge Hover */
+/* Hover Row */
+.courses-table tr:hover {
+  background-color: #f3f4f6;
+  transition: 0.2s ease;
+}
+
+/* =========================
+   Status Badge
+========================= */
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
 .status-badge:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* Action Buttons */
+/* =========================
+   Action Buttons
+========================= */
+
 .action-buttons button {
-  padding: 2px 6px;
+  padding: 5px 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
-  margin-right: 4px;
+  margin-right: 6px;
+  transition: all 0.25s ease;
 }
 
-/* Individual Action Buttons */
+/* Edit */
 .edit-btn {
-  background-color: #7E6363; /* mid accent */
+  background-color: #7E6363;
   color: white;
 }
 
 .edit-btn:hover {
-  background-color: #503C3C; /* secondary dark hover */
+  background-color: #503C3C;
 }
 
+/* Topics */
 .topics-btn {
-  background-color: #A87C7C; /* primary accent */
+  background-color: #A87C7C;
   color: white;
 }
 
@@ -80,39 +174,60 @@
   background-color: #7E6363;
 }
 
+/* Delete */
 .delete-btn {
-  background-color: #503C3C; /* secondary dark */
+  background-color: #503C3C;
   color: white;
 }
 
 .delete-btn:hover {
-  background-color: #3E3232; /* darkest hover */
+  background-color: #3E3232;
 }
 
-/* ========================
-   Responsive for Mobile
-======================== */
+/* =========================
+   Mobile Responsive
+========================= */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+  
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
   .manage-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .courses-table {
-    display: block; /* allow horizontal scroll */
-    overflow-x: auto;
-    white-space: nowrap;
+    font-size: 13px;
   }
 
   .courses-table th,
   .courses-table td {
-    padding: 6px 8px;
-    font-size: 13px;
+    padding: 8px;
   }
 
   .action-buttons button {
-    padding: 2px 4px;
+    padding: 4px 8px;
     font-size: 11px;
   }
+}
+
+/* Additional fix to ensure no content appears under sidebar */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
