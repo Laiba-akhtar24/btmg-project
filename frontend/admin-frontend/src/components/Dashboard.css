@@ -1,0 +1,164 @@
+/* src/components/Dashboard.css */
+
+/* Main Container */
+.dashboard-container {
+  padding: 25px 30px;
+  margin-left: 240px; /* Sidebar width */
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  background: #F9F7F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.main-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3E3232;
+  margin-bottom: 6px;
+  position: relative;
+  text-align: center;
+}
+
+.main-content h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #A87C7C, #503C3C);
+  margin: 6px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Subtitle */
+.main-content p {
+  font-size: 16px;
+  color: #7E6363;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Summary Cards Container */
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual Summary Card */
+.summary-card {
+  flex: 1 1 220px;
+  max-width: 220px;
+  background: linear-gradient(145deg, #503C3C, #7E6363);
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Icons (optional decorative circles) */
+.summary-card::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
+}
+
+/* Card Title */
+.summary-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* Card Number */
+.summary-card p {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #fff;
+}
+
+/* Hover Effects */
+.summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  background: linear-gradient(145deg, #7E6363, #503C3C);
+}
+
+.summary-card:hover p {
+  transform: scale(1.1);
+}
+
+.summary-card:hover::before {
+  transform: scale(1.3) rotate(15deg);
+}
+
+/* Card Specific Colors if needed */
+.summary-card.courses h3,
+.summary-card.courses p {
+  color: #F3F4F6;
+}
+
+.summary-card.enrollments h3,
+.summary-card.enrollments p {
+  color: #F3F4F6;
+}
+
+.summary-card.inquiries h3,
+.summary-card.inquiries p {
+  color: #F3F4F6;
+}
+
+/* ===============================
+   Responsive Mobile Styles
+================================= */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .summary-cards {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .summary-card {
+    padding: 18px;
+    max-width: 90%;
+  }
+
+  .main-content h1 {
+    font-size: 26px;
+  }
+
+  .main-content p {
+    font-size: 14px;
+  }
+
+  .summary-card p {
+    font-size: 24px;
+  }
+}

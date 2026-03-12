@@ -1,0 +1,186 @@
+/* ================================
+   Inquiry Page Wrapper
+================================ */
+
+.inquiry-page-wrapper{
+  max-width:700px;
+  margin:60px auto;
+  padding:40px;
+  background:#F8F3E1;
+  border-radius:16px;
+  border:2px solid #E3DBBB;
+  font-family:"Segoe UI",sans-serif;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+
+/* ================================
+   Headings
+================================ */
+
+.inquiry-page-wrapper h1{
+  font-size:34px;
+  font-weight:900;
+  color:black;
+  margin-bottom:10px;
+}
+
+.inquiry-page-wrapper h2{
+  font-size:22px;
+  font-weight:700;
+  color:black;
+  margin-bottom:8px;
+}
+
+.inquiry-page-wrapper p{
+  font-size:15px;
+  color:black;
+  margin-bottom:25px;
+}
+
+
+/* ================================
+   Form Layout
+================================ */
+
+.inquiry-page-form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+
+/* ================================
+   Labels
+================================ */
+
+.inquiry-page-form label{
+  font-weight:700;
+  color:black;
+  font-size:14px;
+}
+
+
+/* ================================
+   Inputs
+================================ */
+
+.inquiry-page-form input,
+.inquiry-page-form textarea{
+  padding:12px 14px;
+  border-radius:8px;
+  border:2px solid #E3DBBB;
+  background:#ffffff;
+  font-size:14px;
+  outline:none;
+  transition:all 0.2s ease;
+}
+
+.inquiry-page-form input:focus,
+.inquiry-page-form textarea:focus{
+  border-color:#AEB784;
+  box-shadow:0 0 0 3px rgba(174,183,132,0.3);
+}
+
+.inquiry-page-form textarea{
+  min-height:110px;
+  resize:vertical;
+}
+
+
+/* ================================
+   Consent Box
+================================ */
+
+.consent-box{
+  background:#E3DBBB;
+  padding:18px;
+  border-radius:10px;
+  font-size:13px;
+  color:black;
+}
+
+.consent-box p{
+  margin:6px 0;
+}
+
+
+/* ================================
+   Success Message
+================================ */
+
+.alert-success{
+  background:#AEB784;
+  color:#41431B;
+  padding:12px 14px;
+  border-radius:8px;
+  font-weight:700;
+}
+
+
+/* ================================
+   Submit Button
+================================ */
+
+.inquiry-page-wrapper .submit-btn{
+  margin-top:10px;
+  padding:14px;
+  border-radius:8px;
+  border:none;
+  background:#41431B ;
+  color:#F8F3E1 ;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  transition:all 0.25s ease;
+}
+
+.inquiry-page-wrapper .submit-btn:hover{
+  background:#AEB784 ;
+  color:#41431B ;
+  transform:translateY(-2px);
+}
+
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width:768px){
+
+  .inquiry-page-wrapper{
+    margin:30px 20px;
+    padding:30px 24px;
+  }
+
+  .inquiry-page-wrapper h1{
+    font-size:28px;
+  }
+
+  .inquiry-page-wrapper h2{
+    font-size:20px;
+  }
+
+}
+/* InquiryForm.css */
+
+/* Close button (top-right corner) */
+.inquiry-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;          /* black color */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.inquiry-close-btn:hover {
+  color: #503C3C;        /* subtle hover effect */
+  transform: scale(1.1);
+}

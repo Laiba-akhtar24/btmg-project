@@ -1,0 +1,71 @@
+.enrollment-form-wrapper {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.enrollment-form-wrapper h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #09637E;
+}
+
+.enrollment-form-wrapper p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.enrollment-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.enrollment-form input,
+.enrollment-form select,
+.enrollment-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.enrollment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.enrollment-form .consent {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.enrollment-form .consent input {
+  margin-right: 8px;
+}
+
+.enrollment-form .btn.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #09637E;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.enrollment-form .btn.submit-btn:hover {
+  background-color: #088395;
+}

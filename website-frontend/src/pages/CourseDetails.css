@@ -1,0 +1,209 @@
+/* ====================== Course Details Page ====================== */
+
+.course-details-page {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #F8F3E1;
+  color: black;
+}
+
+/* Course Name */
+
+.course-name {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* ====================== Main Grid ====================== */
+
+.course-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* ====================== Left Section ====================== */
+.course-left {
+  background: #E3DBBB;   /* lighter palette background */
+  padding: 25px;
+  border-radius: 18px;
+  border: 2px solid #AEB784;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.course-left h2 {
+  font-weight: 800;
+  margin-top: 20px;
+  color: black;
+}
+
+.course-left ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.course-left li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: black;
+}
+
+/* ====================== Right Snapshot Card ====================== */
+
+.course-right .snapshot-card {
+  background: #F8F3E1;
+  padding: 25px;
+  border-radius: 18px;
+  border: 2px solid #E3DBBB;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.snapshot-card h3 {
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: black;
+}
+
+.snapshot-card p {
+  margin: 6px 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+}
+
+/* ====================== Buttons ====================== */
+
+.snapshot-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.snapshot-buttons .btn {
+  padding: 12px 25px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s, background 0.25s;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Hover animation */
+
+.snapshot-buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons using palette */
+
+.enroll-btn {
+  background-color: #41431B;
+  color: #F8F3E1;
+}
+
+.enroll-btn:hover {
+  background-color: #AEB784;
+  color: #41431B;
+}
+
+.inquiry-btn {
+  color: #AEB784;
+  background-color: #41431B;
+}
+
+.inquiry-btn:hover {
+  background-color: #41431B;
+  color: #F8F3E1;
+}
+
+.pdf-btn {
+  color: #E3DBBB;
+  background-color: #41431B;
+}
+
+.pdf-btn:hover {
+  background-color: #AEB784;
+}
+
+.print-btn {
+  background-color: #41431B;
+  color: #F8F3E1;
+}
+
+.print-btn:hover {
+  background-color: #AEB784;
+  color: #41431B;
+}
+/* Container for heading + button */
+.course-header {
+  display: flex;
+  justify-content: space-between; /* Heading left, button right */
+  align-items: center;
+  margin-bottom: 30px; /* spacing below header */
+}
+
+/* Course Name */
+.course-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3E3232; /* optional, dark text */
+  margin: 0; /* remove default margin */
+}
+
+/* Back to Courses Button */
+.back-to-courses-btn {
+  padding: 10px 20px;
+  background-color: #000; /* black background */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-courses-btn:hover {
+  background-color: #333; /* dark gray hover */
+  transform: translateY(-2px);
+}
+
+/* ====================== Responsiveness ====================== */
+
+@media (max-width: 992px) {
+
+  .course-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .course-name {
+    font-size: 32px;
+  }
+
+  .snapshot-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .snapshot-buttons .btn {
+    width: 100%;
+  }
+
+}

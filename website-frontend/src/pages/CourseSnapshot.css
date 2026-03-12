@@ -1,0 +1,65 @@
+/* Snapshot Card */
+
+.course-right .snapshot-card {
+  padding: 20px;
+  border: 2px solid #AEB784;
+  border-radius: 12px;
+  background-color: #E3DBBB;  
+  margin-top: 20px;
+  color: black;
+}
+
+/* Snapshot heading */
+
+.snapshot-card h3 {
+  color: black;
+  font-weight: 800;
+}
+
+/* Snapshot details */
+
+.snapshot-card p {
+  color: black;
+  font-weight: 600;
+}
+
+/* Buttons container */
+
+.snapshot-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+/* Base button */
+
+.snapshot-buttons .btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #41431B;
+  color: #F8F3E1;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+
+.snapshot-buttons .btn:hover {
+  background: #F8F3E1;
+  color: #41431B;
+}
+
+/* PDF variant */
+
+.snapshot-buttons .pdf-btn {
+  background: #41431B;
+  color: #E3DBBB;
+}
+
+.snapshot-buttons .pdf-btn:hover {
+  background: #F8F3E1;
+  color: #41431B;
+}

@@ -1,0 +1,202 @@
+/* ===== Dashboard Container with Sidebar ===== */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9; /* light background for main content */
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  flex: 1;
+  margin-left: 100px; /* same as sidebar width */
+  padding: 40px 50px;
+  background: #f1f5f9;
+  color: #3E3232;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #3E3232;
+}
+
+/* ===== Form ===== */
+.add-course-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.add-course-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #3E3232;
+}
+
+.add-course-form input,
+.add-course-form textarea,
+.add-course-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #503C3C; /* secondary dark */
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.add-course-form input:focus,
+.add-course-form textarea:focus,
+.add-course-form select:focus {
+  border-color: #A87C7C; /* primary accent */
+  box-shadow: 0 0 5px rgba(168,124,124,0.4);
+  outline: none;
+}
+
+.add-course-form small {
+  font-size: 0.8rem;
+  color: #7E6363;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===== Duration ===== */
+.duration-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.duration-wrapper input,
+.duration-wrapper select {
+  flex: 1;
+}
+
+/* ===== Skills ===== */
+.skills-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.skills-input input {
+  flex: 1;
+}
+
+.skills-input button {
+  padding: 10px 20px;
+  background: #A87C7C;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 600;
+}
+
+.skills-input button:hover {
+  background: #7E6363;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.skill-tag {
+  background: #7E6363;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-tag button {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f87171; /* red for remove */
+  font-weight: bold;
+}
+
+/* ===== Status ===== */
+.status-checkbox {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start; /* move checkbox + label to left */
+}
+
+.status-checkbox input[type="checkbox"] {
+  margin-right: 8px; /* spacing between checkbox and label */
+}
+
+/* ===== Buttons ===== */
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form-buttons button[type="submit"] {
+  background: #A87C7C;
+  color: #fff;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background: #7E6363;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #503C3C;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #3E3232;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 30px 25px;
+  }
+  .duration-wrapper {
+    flex-direction: column;
+  }
+  .skills-input {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .add-course-form {
+    padding: 20px;
+  }
+  .form-buttons {
+    flex-direction: column;
+  }
+  .form-buttons button {
+    width: 100%;
+  }
+}

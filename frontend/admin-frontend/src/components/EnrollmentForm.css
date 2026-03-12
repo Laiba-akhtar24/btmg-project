@@ -1,0 +1,124 @@
+/* ===== Enrollment Form Container ===== */
+.enrollment-form-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Heading ===== */
+.enrollment-form-container h2 {
+  color: #09637E;
+  margin-bottom: 10px;
+}
+
+.enrollment-form-container p {
+  color: #374151;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ===== Success Alert ===== */
+.alert-success {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* ===== Form ===== */
+.enrollment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Labels ===== */
+.enrollment-form label {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: #1f2937;
+}
+
+/* ===== Inputs ===== */
+.enrollment-form input,
+.enrollment-form select,
+.enrollment-form textarea {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+/* Focus effect */
+.enrollment-form input:focus,
+.enrollment-form select:focus,
+.enrollment-form textarea:focus {
+  border-color: #09637E;
+  outline: none;
+}
+
+/* ===== Textarea ===== */
+.enrollment-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ===== Consent Box ===== */
+.consent-box {
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.consent-box input {
+  margin-right: 5px;
+}
+
+/* ===== Submit Button ===== */
+.enrollment-form button {
+  margin-top: 12px;
+  padding: 9px 14px;
+  background: #09637E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.enrollment-form button:hover {
+  background: #088395;
+}
+
+.enrollment-form button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ===== Consent Note ===== */
+.consent-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .enrollment-form-container {
+    padding: 20px;
+    margin: 15px;
+  }
+}

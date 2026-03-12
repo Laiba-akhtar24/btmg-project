@@ -1,0 +1,157 @@
+/* --- Container --- */
+.contact-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  background: #F8F3E1;
+}
+
+/* --- Hero --- */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  color: black;
+}
+
+/* --- Form Wrapper --- */
+.contact-form-wrapper {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.contact-form-wrapper:hover {
+  transform: translateY(-3px);
+}
+
+/* --- Form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Form Groups --- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: black;
+}
+
+/* --- Inputs & Textarea --- */
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #AEB784;
+  box-shadow: 0 0 5px rgba(174,183,132,0.4);
+}
+
+/* --- Textarea --- */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* --- Consent Checkbox --- */
+.consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.consent input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: #AEB784;
+}
+
+.consent label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: black;
+}
+
+/* --- Submit Button --- */
+.btn-submit {
+  background: #41431B;
+  color: #F8F3E1;
+  font-weight: 600;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  background: #AEB784;
+  color: #41431B;
+  transform: translateY(-2px);
+}
+
+/* --- Success Message --- */
+.alert-success {
+  background: #E3DBBB;
+  color: black;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #AEB784;
+}
+
+/* --- Response Note --- */
+.response-time {
+  text-align: center;
+  color: black;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+
+  .contact-page {
+    margin: 30px 15px;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+
+  .contact-hero h1 {
+    font-size: 32px;
+  }
+
+}

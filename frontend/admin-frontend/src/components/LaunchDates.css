@@ -1,0 +1,220 @@
+/* Page Container */
+
+.launch-container{
+    padding:40px;
+    margin-left:150px;
+}
+
+
+/* Header */
+
+.launch-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.launch-title{
+    font-size:30px;
+    font-weight:700;
+    color:#3E3232;
+}
+
+.launch-desc{
+    color:#7E6363;
+    margin-bottom:25px;
+}
+
+
+/* Add Button */
+
+.add-launch-btn{
+    background:#3E3232;
+    border:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.add-launch-btn:hover{
+    background:#503C3C;
+}
+
+
+/* Form */
+
+.launch-form{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom:25px;
+    border-left:5px solid #A87C7C;
+}
+
+.launch-form label{
+    font-weight:600;
+    color:#3E3232;
+}
+
+.launch-form select,
+.launch-form input{
+    width:100%;
+    padding:8px;
+    margin-top:6px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:6px;
+}
+
+
+/* Save Button */
+
+.save-btn{
+    background:#A87C7C;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+    color:white;
+}
+
+.save-btn:hover{
+    background:#7E6363;
+}
+
+
+/* Table Card */
+
+.launch-table-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+/* Table */
+
+.launch-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.launch-table th{
+    background:#3E3232;
+    color:white;
+    padding:14px;
+    text-align:left;
+}
+
+.launch-table td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+.launch-table tr:nth-child(even){
+    background:#f7f4f4;
+}
+
+
+/* Action Row */
+
+.action-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+
+/* Counter Labels */
+
+.counter{
+    font-size:14px;
+    color:#503C3C;
+}
+
+
+/* Counter Badge */
+
+.count-badge{
+    background:#7E6363;
+    color:white;
+    padding:2px 8px;
+    border-radius:6px;
+    margin-left:4px;
+    font-size:12px;
+}
+
+
+/* Buttons */
+
+.edit-btn{
+    background:#7E6363;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.edit-btn:hover{
+    background:#503C3C;
+}
+
+.delete-btn{
+    background:#A87C7C;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#7E6363;
+}
+
+
+/* Empty Row */
+
+.empty-row{
+    text-align:center;
+    padding:25px;
+    color:#7E6363;
+}
+/* Form Header */
+
+.launch-form-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.form-title{
+font-size:20px;
+font-weight:600;
+color:#3E3232;
+}
+
+/* Back Button */
+
+.back-btn{
+background:#503C3C;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+font-weight:500;
+}
+
+.back-btn:hover{
+background:#3E3232;
+}

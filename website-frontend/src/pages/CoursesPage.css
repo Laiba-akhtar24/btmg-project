@@ -1,0 +1,184 @@
+/* =========================
+   COURSES PAGE
+========================= */
+
+.courses-page{
+    padding: 40px 60px;
+    background: #F8F3E1;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.courses-page h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+    font-weight: 700;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.courses-layout{
+    display: flex;
+    gap: 40px;
+}
+
+
+/* =========================
+   FILTER SIDEBAR
+========================= */
+
+.filters{
+    width: 250px;
+    background: #F8F3E1;
+    padding: 25px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 2px 10px rgba(65, 67, 27, 0.08);
+    border: 1px solid #E3DBBB;
+}
+
+.filter-section{
+    margin-bottom: 30px;
+}
+
+.filter-section h3{
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #AEB784;
+    padding-bottom: 6px;
+    color: black;
+}
+
+
+/* FILTER OPTIONS */
+
+.filter-section label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.filter-section input{
+    cursor: pointer;
+    accent-color: black;
+}
+
+
+/* =========================
+   COURSES AREA
+========================= */
+
+.courses-content{
+    flex: 1;
+}
+
+
+/* =========================
+   COURSES GRID
+========================= */
+
+.courses-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.btn{
+    background: #41431B;
+    color: #F8F3E1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover{
+    background: #AEB784;
+    color: #41431B;
+}
+
+
+/* =========================
+   OPTIONAL CARD STYLE
+   use if course cards exist
+========================= */
+
+.course-card{
+    background: #E3DBBB;
+    border: 1px solid #41431B;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(65, 67, 27, 0.06);
+    overflow: hidden;
+}
+
+.course-card h3,
+.course-card h4{
+    color: black;
+}
+
+.course-card p{
+    color: black;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1024px){
+
+    .courses-layout{
+        gap: 25px;
+    }
+
+    .filters{
+        width: 220px;
+    }
+
+    .courses-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px){
+
+    .courses-page{
+        padding: 30px 20px;
+    }
+
+    .courses-layout{
+        flex-direction: column;
+    }
+
+    .filters{
+        width: 100%;
+    }
+
+    .courses-grid{
+        grid-template-columns: 1fr;
+    }
+
+}

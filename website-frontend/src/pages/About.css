@@ -1,0 +1,122 @@
+.about-page{
+  background:#F8F3E1;
+  padding:80px 0;
+}
+
+/* INTRO */
+
+.about-intro{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  margin-bottom:80px;
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h1{
+  font-size:42px;
+  color: black;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  color:black;
+  line-height:1.7;
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.about-image{
+  flex:1;
+}
+
+.about-image img{
+  width:100%;
+  max-width:450px;
+}
+
+/* FEATURES */
+
+.features-section{
+  text-align:center;
+  margin-bottom:80px;
+}
+
+.features-section h2{
+  color:black;
+  margin-bottom:10px;
+}
+
+.section-sub{
+  color:black;
+  margin-bottom:40px;
+}
+
+.features-grid{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+}
+
+.feature-card{
+  background:#ffffff;
+  padding:30px;
+  border-radius:10px;
+  width:300px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.feature-card h4{
+  color:black;
+  margin-bottom:10px;
+}
+
+.feature-card p{
+  color:black;
+}
+
+/* SUBSCRIBE */
+
+.subscribe-section{
+  text-align:center;
+}
+
+.subscribe-section form{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.subscribe-section input{
+  padding:12px 15px;
+  width:300px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.subscribe-section button{
+  background:#41431B;
+  color:#F8F3E1;
+  border:none;
+  padding:12px 22px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.subscribe-section button:hover{
+  background:#AEB784;
+  color:black;
+}
+
+.subscribe-message{
+  margin-top:15px;
+  color:black;
+}
+.feature-icon{
+  font-size:40px;
+  margin-bottom:15px;
+  color:#41431B;
+}

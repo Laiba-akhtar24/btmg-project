@@ -1,0 +1,111 @@
+.categories-page {
+  margin-left: 150px;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-category-form {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-category-form input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  flex: 1;
+}
+
+.add-category-form button {
+ padding: 5px 10px;
+  border-radius: 6px;
+  background: #A87C7C;
+  color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-category-form button:hover {
+  background: #7E6363;
+}
+
+.table-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.categories-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.categories-table th,
+.categories-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.categories-table th {
+  background: #3E3232;
+  text-align: left;
+  color: #f3f4f6;
+}
+.edit-btn{
+     background: #3E3232;
+     color: #f3f4f6;
+}
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* Badge for status or categories */
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+}
+
+.active {
+  background: #16a34a;
+}
+
+.inactive {
+  background: #6b7280;
+}
+
+/* Select All checkbox layout */
+.select-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
