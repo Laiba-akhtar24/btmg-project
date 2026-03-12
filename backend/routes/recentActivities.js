@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const Enrollment = require("../models/Enrollment");
-const CourseInquiry = require("../models/CourseInquiry");
+const CourseInquiry = require("../models/Inquiry");
 const Course = require("../models/Course");
 
 // GET: recent enrollments

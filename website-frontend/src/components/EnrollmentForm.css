@@ -1,71 +1,174 @@
-.enrollment-form-wrapper {
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', sans-serif;
+/* ================================
+   Enrollment Form Wrapper
+================================ */
+
+.enrollment-form-wrapper{
+  max-width:700px;
+  margin:60px auto;
+  padding:40px;
+  background:#F8F3E1;
+  border-radius:16px;
+  border:2px solid #E3DBBB;
+  font-family:"Segoe UI",sans-serif;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  position: relative;
 }
 
-.enrollment-form-wrapper h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  color: #09637E;
+
+/* ================================
+   Headings
+================================ */
+
+.enrollment-form-wrapper h1{
+  font-size:34px;
+  font-weight:900;
+  color:black;
+  margin-bottom:10px;
 }
 
-.enrollment-form-wrapper p {
-  text-align: center;
-  font-size: 14px;
-  margin-bottom: 25px;
+.enrollment-form-wrapper h2{
+  font-size:22px;
+  font-weight:700;
+  color:black;
+  margin-bottom:8px;
+  text-align:center;
 }
 
-.enrollment-form label {
-  display: block;
-  margin-bottom: 15px;
-  font-weight: 500;
+.enrollment-form-wrapper p{
+  font-size:15px;
+  color:black;
+  margin-bottom:25px;
+  text-align:center;
 }
+
+
+/* ================================
+   Form Layout
+================================ */
+
+.enrollment-form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+
+/* ================================
+   Labels
+================================ */
+
+.enrollment-form label{
+  font-weight:700;
+  color:black;
+  font-size:14px;
+}
+
+
+/* ================================
+   Inputs
+================================ */
 
 .enrollment-form input,
 .enrollment-form select,
-.enrollment-form textarea {
-  width: 100%;
-  padding: 10px 12px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
+.enrollment-form textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:2px solid #E3DBBB;
+  background:#ffffff;
+  font-size:14px;
+  outline:none;
+  transition:all 0.2s ease;
 }
 
-.enrollment-form textarea {
-  resize: vertical;
-  min-height: 80px;
+.enrollment-form input:focus,
+.enrollment-form select:focus,
+.enrollment-form textarea:focus{
+  border-color:#AEB784;
+  box-shadow:0 0 0 3px rgba(174,183,132,0.3);
 }
 
-.enrollment-form .consent {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
+.enrollment-form textarea{
+  min-height:110px;
+  resize:vertical;
 }
 
-.enrollment-form .consent input {
-  margin-right: 8px;
+
+/* ================================
+   Consent Box
+================================ */
+
+.enrollment-form .consent{
+  background:#E3DBBB;
+  padding:18px;
+  border-radius:10px;
+  font-size:13px;
+  color:black;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
 }
 
-.enrollment-form .btn.submit-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #09637E;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
+.enrollment-form .consent input{
+  margin-top:3px;
 }
 
-.enrollment-form .btn.submit-btn:hover {
-  background-color: #088395;
+
+/* ================================
+   Success Message
+================================ */
+
+.alert-success{
+  background:#AEB784;
+  color:#41431B;
+  padding:12px 14px;
+  border-radius:8px;
+  font-weight:700;
+}
+
+
+/* ================================
+   Submit Button
+================================ */
+
+.enrollment-form .submit-btn{
+  margin-top:10px;
+  padding:14px;
+  border-radius:8px;
+  border:none;
+  background:#41431B;
+  color:#F8F3E1;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  transition:all 0.25s ease;
+  width:100%;
+}
+
+.enrollment-form .submit-btn:hover{
+  background:#AEB784;
+  color:#41431B;
+  transform:translateY(-2px);
+}
+
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width:768px){
+
+  .enrollment-form-wrapper{
+    margin:30px 20px;
+    padding:30px 24px;
+  }
+
+  .enrollment-form-wrapper h1{
+    font-size:28px;
+  }
+
+  .enrollment-form-wrapper h2{
+    font-size:20px;
+  }
+
 }
