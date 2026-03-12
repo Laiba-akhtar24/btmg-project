@@ -190,3 +190,152 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #503C3C;
 }
+/* ===============================
+   Recent Activities Section
+================================= */
+
+.recent-activities{
+margin-top:45px;
+width:100%;
+background:white;
+border-radius:14px;
+padding:28px 30px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:left;
+border-top:4px solid #A87C7C;
+}
+
+/* Section Heading */
+
+.recent-activities h2{
+font-size:22px;
+font-weight:600;
+color:#3E3232;
+margin-bottom:20px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* subtle divider */
+
+.recent-activities h2::after{
+content:"";
+flex:1;
+height:2px;
+background:linear-gradient(90deg,#A87C7C,#EFE9E7);
+margin-left:10px;
+border-radius:3px;
+}
+
+/* Activity List */
+
+.activity-list{
+list-style:none;
+padding:0;
+margin:0;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+/* Activity Row */
+
+.activity-item{
+display:flex;
+align-items:center;
+gap:15px;
+padding:14px 16px;
+border-radius:10px;
+transition:all .25s ease;
+background:#faf8f7;
+border:1px solid #f0e9e7;
+}
+
+/* Hover effect */
+
+.activity-item:hover{
+background:#F5F1F0;
+transform:translateX(4px);
+box-shadow:0 6px 15px rgba(0,0,0,0.06);
+}
+
+/* Icon container */
+
+.activity-icon{
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+background:#EFE9E7;
+color:#503C3C;
+}
+
+/* Different activity types */
+
+.activity-item.course .activity-icon{
+background:#F1E7E4;
+color:#503C3C;
+}
+
+.activity-item.enrollment .activity-icon{
+background:#EDE6E4;
+color:#7E6363;
+}
+
+.activity-item.inquiry .activity-icon{
+background:#F6EFED;
+color:#A87C7C;
+}
+
+/* Activity text */
+
+.activity-content{
+display:flex;
+flex-direction:column;
+gap:2px;
+}
+
+.activity-content p{
+margin:0;
+font-size:15px;
+font-weight:500;
+color:#3E3232;
+}
+
+.activity-content span{
+font-size:12px;
+color:#8c7a7a;
+}
+
+/* Empty state */
+
+.no-activity{
+color:#8c7a7a;
+font-size:14px;
+text-align:center;
+padding:20px 0;
+}
+
+
+/* ===============================
+   Responsive
+================================= */
+
+@media (max-width:768px){
+
+.recent-activities{
+padding:20px;
+}
+
+.activity-item{
+padding:12px;
+}
+
+.activity-content p{
+font-size:14px;
+}
+
+}
