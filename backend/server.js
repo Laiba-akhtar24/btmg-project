@@ -14,7 +14,11 @@ connectDB()
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
 // ===== Middleware =====
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+const allowedOrigins = [
+'http://localhost:3000',
+'http://localhost:3001',
+'https://your-frontend.vercel.app'
+];
 
 app.use(cors({
   origin: function(origin, callback){

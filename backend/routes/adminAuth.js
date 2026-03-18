@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 // Only ONE admin email and password
-const ADMIN_EMAIL = "laibaakhtar9890@gmail.com";
-const ADMIN_PASSWORD = "123456";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 router.post("/admin-login", (req, res) => {
   const { email, password } = req.body;
