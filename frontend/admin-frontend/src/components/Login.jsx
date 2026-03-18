@@ -10,7 +10,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const API = "http://localhost:5000/api"; // Base API URL
+  const API = "https://btmg-project.vercel.app/api"; // Base API URL
 
   const handleLogin = async (e) => {
     e.preventDefault();
