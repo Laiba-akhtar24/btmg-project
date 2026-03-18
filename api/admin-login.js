@@ -1,14 +1,4 @@
-import mongoose from "mongoose";
 
-// Environment variables from Vercel
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
-
-// MongoDB connection
-async function connectDB() {
-  if (mongoose.connections[0].readyState) return;
-  await mongoose.connect(process.env.MONGO_URI);
-}
 export default function handler(req, res) {
 
   if (req.method !== "POST") {
