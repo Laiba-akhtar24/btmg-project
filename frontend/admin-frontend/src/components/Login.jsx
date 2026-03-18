@@ -19,7 +19,7 @@ const API = "https://btmg-project.vercel.app/api"; // Base API URL
     try {
       // Make POST request to backend login endpoint
     
-const res = await axios.post("https://btmg-project.vercel.app/api/admin-login", { email, password });
+const res = await axios.post(`${API}/admin-login`, { email, password });
       // Check response from backend
       if (res.data.success) {
         // Save session info
