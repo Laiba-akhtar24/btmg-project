@@ -17,7 +17,7 @@ connectDB()
 const allowedOrigins = [
 'http://localhost:3000',
 'http://localhost:3001',
-'https://your-frontend.vercel.app'
+'https://btmg-project.vercel.app'
 ];
 
 app.use(cors({
