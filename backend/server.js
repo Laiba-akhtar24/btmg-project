@@ -5,7 +5,7 @@ const connectDB = require('./config/db');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+
 
 // ===== MongoDB connect =====
 connectDB()
@@ -72,7 +72,3 @@ app.get('/api/course-inquiries/test', (req, res) => {
   res.send('✅ courseInquiries route loaded correctly');
 });
 
-// ===== Start server =====
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});

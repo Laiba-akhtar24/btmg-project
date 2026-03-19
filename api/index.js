@@ -1,20 +1,21 @@
-const serverless = require('serverless-http');
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('../config/db');
-require('dotenv').config();
+const serverless = require('serverless-http');
 
 const app = express();
 
-// MongoDB
-connectDB().then(() => console.log("✅ MongoDB connected"));
+// ===== DB =====
+connectDB()
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.error("❌ DB error:", err));
 
-// Middleware
+// ===== Middleware =====
 app.use(cors({ origin: '*', credentials: true }));
 app.use(express.json());
-app.use('/uploads', express.static('uploads'));
 
-// Routes
+// ===== Routes =====
 app.use('/api/courses', require('../routes/courses'));
 app.use('/api/topics', require('../routes/topics'));
 app.use('/api/subscribers', require('../routes/subscribers'));
@@ -26,11 +27,10 @@ app.use('/api/recent-activities', require('../routes/recentActivities'));
 app.use('/api/contact', require('../routes/contacts'));
 app.use('/api', require('../routes/adminAuth'));
 
-// Test route
+// ===== ROOT ROUTE =====
 app.get('/', (req, res) => {
-  res.send('✅ BTMG Backend is running');
+  res.send('🔥 BTMG Backend is LIVE on Vercel');
 });
 
-// Export for Vercel serverless
-module.exports = app;
-module.exports.handler = serverless(app);
+// ===== EXPORT =====
+module.exports = serverless(app);
