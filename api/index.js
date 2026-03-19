@@ -3,40 +3,62 @@ const express = require('express');
 const cors = require('cors');
 const serverless = require('serverless-http');
 
-const connectDB = require('../config/db');
+// ✅ FIXED PATH (backend folder)
+const connectDB = require('../backend/config/db');
 
 const app = express();
 
-// Middleware
-app.use(cors({ origin: '*', credentials: true }));
+// ===== Middleware =====
+app.use(cors({
+  origin: '*',
+  credentials: true
+}));
 app.use(express.json());
 
-// DB middleware
-app.use(async (req, res, next) => {
+// ===== DB CONNECTION (SAFE FOR VERCEL) =====
+let isConnected = false;
+
+const connectDatabase = async () => {
+  if (isConnected) return;
+
   try {
     await connectDB();
-    next();
+    isConnected = true;
+    console.log("✅ MongoDB connected");
   } catch (err) {
     console.error("❌ MongoDB error:", err);
-    return res.status(500).json({ error: "Database connection failed" });
+    throw err; // important for error handling
+  }
+};
+
+// Ensure DB connects before routes
+app.use(async (req, res, next) => {
+  try {
+    await connectDatabase();
+    next();
+  } catch (err) {
+    return res.status(500).json({
+      error: "Database connection failed"
+    });
   }
 });
 
-// Routes
-app.use('/api/courses', require('../routes/courses'));
-app.use('/api/topics', require('../routes/topics'));
-app.use('/api/subscribers', require('../routes/subscribers'));
-app.use('/api/categories', require('../routes/categories'));
-app.use('/api/launch-dates', require('../routes/launchDates'));
-app.use('/api/course-inquiries', require('../routes/courseInquiries'));
-app.use('/api/enrollments', require('../routes/enrollments'));
-app.use('/api/recent-activities', require('../routes/recentActivities'));
-app.use('/api/contact', require('../routes/contacts'));
-app.use('/api', require('../routes/adminAuth'));
+// ===== ROUTES (FIXED PATHS) =====
+app.use('/api/courses', require('../backend/routes/courses'));
+app.use('/api/topics', require('../backend/routes/topics'));
+app.use('/api/subscribers', require('../backend/routes/subscribers'));
+app.use('/api/categories', require('../backend/routes/categories'));
+app.use('/api/launch-dates', require('../backend/routes/launchDates'));
+app.use('/api/course-inquiries', require('../backend/routes/courseInquiries'));
+app.use('/api/enrollments', require('../backend/routes/enrollments'));
+app.use('/api/recent-activities', require('../backend/routes/recentActivities'));
+app.use('/api/contact', require('../backend/routes/contacts'));
+app.use('/api', require('../backend/routes/adminAuth'));
 
-// Root
+// ===== ROOT ROUTE =====
 app.get('/', (req, res) => {
   res.send('🔥 BTMG Backend LIVE (Vercel)');
 });
 
+// ===== EXPORT =====
 module.exports = serverless(app);
