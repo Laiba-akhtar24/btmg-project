@@ -3,7 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const serverless = require('serverless-http');
 
-const connectDB = require('../config/db');
+require('../backend/config/db');
+require('../backend/routes/courses')
 
 const app = express();
 
