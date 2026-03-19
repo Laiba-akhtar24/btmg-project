@@ -1,6 +1,7 @@
 {
   "name": "btmg-project",
   "version": "1.0.0",
+  "type": "module",
   "description": "BTMG Trainings MERN project ready for Vercel deployment",
   "main": "index.js",
   "scripts": {

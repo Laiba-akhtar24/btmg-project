@@ -9,7 +9,7 @@ const ManageCourses = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const API_URL = 'http://localhost:5000/api/courses';
+  const API_URL = '/api/courses';
 
   // Fetch courses
   const fetchCourses = async () => {
