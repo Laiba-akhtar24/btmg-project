@@ -4,7 +4,8 @@ const cors = require('cors');
 const serverless = require('serverless-http');
 
 // ✅ FIXED PATH (backend folder)
-const connectDB = require('../backend/config/db');
+require('./routes/courses')
+require('./config/db')
 
 const app = express();
 
