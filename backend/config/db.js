@@ -8,13 +8,16 @@ const connectDB = async () => {
   }
 
   try {
-    const db = await mongoose.connect(process.env.MONGO_URI);
+    const db = await mongoose.connect(process.env.MONGO_URI, {
+      bufferCommands: false,
+    });
 
     isConnected = db.connections[0].readyState === 1;
-    console.log('✅ MongoDB connected');
+
+    console.log('✅ MongoDB Connected');
   } catch (error) {
-    console.error('❌ MongoDB connection failed:', error.message);
-    // ❌ DO NOT exit process in serverless
+    console.error('❌ MongoDB Error:', error.message);
+    throw error;
   }
 };
 

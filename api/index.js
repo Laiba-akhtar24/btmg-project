@@ -8,7 +8,10 @@ const app = express();
 
 app.use(express.json());
 
-connectDB();
+app.use(async (req, res, next) => {
+  await connectDB();
+  next();
+});
 
 app.use('/api/courses', courseRoutes);
 
